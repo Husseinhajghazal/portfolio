@@ -1,55 +1,72 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import eRestoran from "@/assets/images/e-restoran.png";
+import eCommerec from "@/assets/images/ecommerce.png";
+import qBite from "@/assets/images/qbite.png";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
+import GithubIcon from "@/assets/icons/github.svg";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
-import grainImage from "@/assets/images/grain.jpg";
 import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "Arniva",
+    year: "2024",
+    title: "E-Restoran",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      {
+        title:
+          "Integrated order management across Trendyol, Yemeksepeti, Migros, Getir, and Fudy",
+      },
+      {
+        title: "Centralized restaurant, courier, and order tracking management",
+      },
+      { title: "Enhanced operational efficiency with advanced features" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://www.e-restoran.com/",
+    githubLink: null,
+    image: eRestoran,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "freelance",
+    year: "2024",
+    title: "QBite",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "Built customizable QR-linked digital menus for restaurants" },
+      {
+        title:
+          "Enabled dynamic meal, logo, and theme modifications without coding",
+      },
+      { title: "Supported bilingual Arabic-English interface" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    link: "https://qbite-client-husseinhajghazals-projects.vercel.app/",
+    githubLink: "https://github.com/Husseinhajghazal/qbite-dashboard",
+    image: qBite,
   },
   {
-    company: "Quantum Dynamics",
+    company: "freelance",
     year: "2023",
-    title: "AI Startup Landing Page",
+    title: "MERN-Ecommerce",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      {
+        title:
+          "Developed a multi-vendor ecommerce platform with cart, order, and payment features",
+      },
+      {
+        title:
+          "Enabled sellers to manage products, events, coupons, and orders",
+      },
+      { title: "Provided real-time order tracking and management dashboard" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://ecommerce-33baa.web.app/",
+    githubLink: "https://github.com/Husseinhajghazal/mern-ecommerce",
+    image: eCommerec,
   },
 ];
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section id="projects" className="pb-16 lg:py-24">
       <div className="container">
         <SectionHeader
           eyebrow="Real-world Results"
@@ -85,18 +102,27 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
-                    <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                      <span>Visit Live Site</span>
-                      <ArrowUpRight />
-                    </button>
-                  </a>
+                  <div className="flex items-center gap-2 mt-8">
+                    <a href={project.link} className="flex-1 md:flex-none">
+                      <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 hover:bg-gray-950 hover:text-white duration-300">
+                        <span>Visit Live Site</span>
+                        <ArrowUpRight />
+                      </button>
+                    </a>
+                    {project.githubLink && (
+                      <a href={project.githubLink}>
+                        <button className="border-gray-950 text-gray-950 border-[3px] h-12 w-12 rounded-xl font-semibold inline-flex items-center justify-center hover:border-white hover:text-white duration-300">
+                          <GithubIcon className="size-8" />
+                        </button>
+                      </a>
+                    )}
+                  </div>
                 </div>
                 <div className="relative">
                   <Image
                     src={project.image}
                     alt={project.title}
-                    className="mt-8 -mb-4 md:-mb-0 lg:absolute lg:h-full lg:max-w-none lg:w-auto"
+                    className=" rounded-3xl mt-8 -mb-4 md:-mb-0 lg:absolute lg:h-full lg:max-w-none lg:w-auto"
                   />
                 </div>
               </div>

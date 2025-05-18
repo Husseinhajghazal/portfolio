@@ -2,26 +2,22 @@ import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 
 const footerLinks = [
   {
-    title: "Youtube",
-    href: "",
-  },
-  {
-    title: "Twitter",
-    href: "",
+    title: "Github",
+    href: "https://github.com/Husseinhajghazal",
   },
   {
     title: "Instagram",
-    href: "",
+    href: "https://www.instagram.com/husseindeveloper/",
   },
   {
     title: "LinkedIn",
-    href: "",
+    href: "https://www.linkedin.com/in/hussein-haj-ghazal",
   },
 ];
 
 export const Footer = () => {
   return (
-    <footer className="relative -z-10 overflow-x-clip">
+    <footer className="relative overflow-x-clip">
       <div
         className="absolute h-[400px] w-[1600px] bottom-0 left-1/2 -translate-x-1/2 bg-emerald-300/30 -z-10"
         style={{
@@ -39,7 +35,7 @@ export const Footer = () => {
               <a
                 href={link.href}
                 key={link.title}
-                className="inline-flex items-center gap-1.5"
+                className="inline-flex items-center gap-1.5 cursor-pointer"
               >
                 <span className="font-semibold">{link.title}</span>
                 <ArrowUpRightIcon className="size-4" />

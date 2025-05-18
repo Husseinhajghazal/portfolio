@@ -2,13 +2,33 @@ import memojiImage from "@/assets/images/memoji-computer.png";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
+import LinkedinIcon from "@/assets/icons/linkedin.svg";
+import InstagramIcon from "@/assets/icons/instagram.svg";
+import GithubIcon from "@/assets/icons/github.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import HeroOrbit from "@/components/HeroOrbit";
 import Image from "next/image";
+import Link from "next/link";
+import TechIcon from "@/components/TechIcon";
+
+const links = [
+  {
+    iconType: GithubIcon,
+    href: "https://github.com/Husseinhajghazal",
+  },
+  {
+    iconType: InstagramIcon,
+    href: "https://www.instagram.com/husseindeveloper/",
+  },
+  {
+    iconType: LinkedinIcon,
+    href: "https://www.linkedin.com/in/hussein-haj-ghazal",
+  },
+];
 
 export const HeroSection = () => {
   return (
-    <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
+    <div className="py-20 md:py-36 lg:py-48 relative z-0 overflow-x-clip">
       <div
         className="absolute inset-0 -z-30"
         style={{
@@ -135,14 +155,33 @@ export const HeroSection = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
-            <span className="font-semibold">Explore My Work</span>
-            <ArrowDown className="size-4" />
-          </button>
-          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl">
-            <span>👋</span>
-            <span className="font-semibold">Let&apos;s Connect</span>
-          </button>
+          <Link href="#projects">
+            <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl hover:bg-white hover:text-gray-900 duration-300">
+              <span className="font-semibold">Explore My Projects</span>
+              <ArrowDown className="size-4" />
+            </button>
+          </Link>
+          <a
+            href="/Hussein-Haj-Ghazal-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl hover:bg-gray-900 hover:text-white duration-300">
+              <span>📄</span>
+              <span className="font-semibold">Open CV</span>
+            </button>
+          </a>
+        </div>
+        <div className="flex justify-center items-center mt-8 gap-4">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="hover:scale-110 duration-300"
+            >
+              <TechIcon component={link.iconType} />
+            </Link>
+          ))}
         </div>
       </div>
     </div>

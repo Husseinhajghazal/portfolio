@@ -10,6 +10,15 @@ import CssIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
 import GithubIcon from "@/assets/icons/github.svg";
+import TypescriptIcon from "@/assets/icons/typescript.svg";
+import CsharpIcon from "@/assets/icons/csharp.svg";
+import JavaIcon from "@/assets/icons/java.svg";
+import PythonIcon from "@/assets/icons/python.svg";
+import NextjsIcon from "@/assets/icons/nextjs.svg";
+import SvelteIcon from "@/assets/icons/svelte.svg";
+import PrismaIcon from "@/assets/icons/prisma.svg";
+import JiraIcon from "@/assets/icons/jira.svg";
+import DatabaseIcon from "@/assets/icons/database.svg";
 import mapImage from "@/assets/images/map.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
 import CardHeader from "@/components/CardHeader";
@@ -23,6 +32,22 @@ const toolboxItems = [
     iconType: JavascriptIcon,
   },
   {
+    title: "Typescript",
+    iconType: TypescriptIcon,
+  },
+  {
+    title: "Csharp",
+    iconType: CsharpIcon,
+  },
+  {
+    title: "Java",
+    iconType: JavaIcon,
+  },
+  {
+    title: "Python",
+    iconType: PythonIcon,
+  },
+  {
     title: "HTML5",
     iconType: HTMLIcon,
   },
@@ -31,7 +56,15 @@ const toolboxItems = [
     iconType: CssIcon,
   },
   {
-    title: "React",
+    title: "Nextjs",
+    iconType: NextjsIcon,
+  },
+  {
+    title: "Svelte",
+    iconType: SvelteIcon,
+  },
+  {
+    title: "React / React Native",
     iconType: ReactIcon,
   },
   {
@@ -42,12 +75,24 @@ const toolboxItems = [
     title: "Github",
     iconType: GithubIcon,
   },
+  {
+    title: "Prisma",
+    iconType: PrismaIcon,
+  },
+  {
+    title: "Jira",
+    iconType: JiraIcon,
+  },
+  {
+    title: "SQL / NoSQL",
+    iconType: DatabaseIcon,
+  },
 ];
 
 const hobbies = [
   {
-    title: "Painting",
-    emoji: "🎨",
+    title: "Football",
+    emoji: "⚽",
     left: "5%",
     top: "5%",
   },
@@ -58,8 +103,8 @@ const hobbies = [
     top: "5%",
   },
   {
-    title: "Hiking",
-    emoji: "🧗",
+    title: "Travel",
+    emoji: "✈️",
     left: "35%",
     top: "40%",
   },
@@ -93,15 +138,15 @@ export const AboutSection = () => {
   const contraintRef = useRef(null);
 
   return (
-    <div className="py-20 lg:py-28">
+    <div id="about" className="py-20 lg:py-28">
       <div className="container">
         <SectionHeader
           eyebrow="About Me"
           title="A Glimpse Into My World"
           description="Learn more about who I am, what I do, and inspires me."
         />
-        <div className="mt-20 flex flex-col gap-6">
-          <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8 lg:grid-cols-3">
+        <div className="mt-20 flex flex-col gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8 lg:grid-cols-3">
             <Card className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader
                 title="My Reads"
@@ -127,7 +172,7 @@ export const AboutSection = () => {
               />
             </Card>
           </div>
-          <div className="md:grid md:grid-cols-5 md:gap-8 lg:grid-cols-3">
+          <div className="md:grid md:grid-cols-5 gap-6 md:gap-8 lg:grid-cols-3">
             <Card className="h-[320px] flex flex-col md:col-span-3 lg:col-span-2">
               <CardHeader
                 title="Beyond the Code"
