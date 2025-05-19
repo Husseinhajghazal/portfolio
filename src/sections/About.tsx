@@ -172,7 +172,7 @@ export const AboutSection = () => {
               />
             </Card>
           </div>
-          <div className="md:grid md:grid-cols-5 gap-6 md:gap-8 lg:grid-cols-3">
+          <div className="grid md:grid-cols-5 gap-6 md:gap-8 lg:grid-cols-3">
             <Card className="h-[320px] flex flex-col md:col-span-3 lg:col-span-2">
               <CardHeader
                 title="Beyond the Code"
