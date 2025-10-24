@@ -1,4 +1,5 @@
 import eRestoran from "@/assets/images/e-restoran.png";
+import excursionMania from "@/assets/images/excursion-mania.png";
 import eCommerec from "@/assets/images/ecommerce.png";
 import qBite from "@/assets/images/qbite.png";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
@@ -9,6 +10,28 @@ import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
 
 const portfolioProjects = [
+  {
+    company: "Arniva",
+    year: "2025",
+    title: "Excursion Mania",
+    results: [
+      {
+        title:
+          "Enhanced the user interface of a multi-vendor tourism website and app",
+      },
+      {
+        title:
+          "Improved usability, accessibility, and responsiveness using HTML, CSS, JS, and PHP",
+      },
+      {
+        title:
+          "Refactored legacy frontend code and implemented a modern, user-friendly design",
+      },
+    ],
+    link: "https://excursionmania.com/",
+    githubLink: null,
+    image: excursionMania,
+  },
   {
     company: "Arniva",
     year: "2024",
