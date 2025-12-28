@@ -149,7 +149,7 @@ export const HeroSection = () => {
             Hey, I&apos;m Hussein
           </h1>
           <p className="pt-4 text-center text-white/60 md:text-lg">
-            I&apos;m specialize in transforming designs into functional,
+            I specialize in transforming designs into functional,
             high-performing web applications integrated with AI. let&apos;s
             discuss your next project.
           </p>
